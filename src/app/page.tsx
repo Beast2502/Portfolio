@@ -83,7 +83,7 @@ const portfolioData: PortfolioData = {
         Mobile: ["React Native", "iOS & Android Apps", "Responsive Layouts"],
         Backend: ["Node.js", "Express.js", "REST APIs", "Microservices", "JWT", "OAuth"],
         Databases: ["MySQL", "PostgreSQL", "MongoDB", "Query Optimization"],
-        "Cloud & DevOps": ["AWS", "Azure", "GCP", "CI/CD", "Docker"],
+        "Cloud & DevOps": ["AWS", "Azure", "GCP", "CI/CD", ],
         Languages: ["JavaScript (ES6+)", "C++"],
     },
     experience: [
