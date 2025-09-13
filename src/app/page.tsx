@@ -83,7 +83,7 @@ const portfolioData: PortfolioData = {
         Mobile: ["React Native", "iOS & Android Apps", "Responsive Layouts"],
         Backend: ["Node.js", "Express.js", "REST APIs", "Microservices", "JWT", "OAuth"],
         Databases: ["MySQL", "PostgreSQL", "MongoDB", "Query Optimization"],
-        "Cloud & DevOps": ["AWS", "Azure", "GCP", "CI/CD", ],
+        "Cloud & DevOps": ["AWS", "Azure", "GCP", "CI/CD",],
         Languages: ["JavaScript (ES6+)", "C++"],
     },
     experience: [
@@ -144,24 +144,27 @@ const ThemeSwitcher: React.FC<{ theme: Theme; setTheme: (t: Theme) => void }> = 
         <button
             onClick={toggleTheme}
             className={`p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 ${theme === "light"
-                ? "bg-slate-200 text-slate-800 focus:ring-indigo-500"
-                : "bg-gray-700 text-slate-200 focus:ring-indigo-500"
+                    ? "bg-slate-200 text-slate-800 focus:ring-indigo-500"
+                    : "bg-gray-700 text-slate-200 focus:ring-indigo-500"
                 }`}
         >
             {theme === "light" ? (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                // Moon Icon (for dark mode)
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                >
                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
                 </svg>
             ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path
-                        fillRule="evenodd"
-                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1z..."
-                        clipRule="evenodd"
-                    />
-                </svg>
+                // Sun Icon (for light mode)
+               <img src={'./sun-3337.svg'} height={20} width={20}   className="filter brightness-0"
+/>
             )}
         </button>
+
     );
 };
 
@@ -398,6 +401,13 @@ const PortfolioPage: React.FC = () => {
                             className="font-medium text-indigo-500 hover:text-indigo-400 transition"
                         >
                             {portfolioData.contact.email}
+                        </a>
+                        <span className="hidden sm:block">|</span>
+                        <a
+                            href={`mailto:${portfolioData.contact.phone}`}
+                            className="font-medium text-indigo-500 hover:text-indigo-400 transition"
+                        >
+                            {portfolioData.contact.phone}
                         </a>
                         <span className="hidden sm:block">|</span>
                         <a href="https://www.linkedin.com/in/mehul-saxena-826a1812b/" className="font-medium text-indigo-500 hover:text-indigo-400 transition">
