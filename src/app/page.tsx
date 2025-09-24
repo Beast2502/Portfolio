@@ -72,7 +72,7 @@ const portfolioData: PortfolioData = {
     name: "Mehul Saxena",
     title: "Software Engineer | Full-Stack & Mobile",
     summary:
-        "Software Engineer with 4+ years of experience in full-stack web and mobile development, specializing in JavaScript (ES6+), React.js, Next.js, Node.js, and React Native. Adept at debugging, solving complex challenges, and leveraging AI-powered tools to accelerate development.",
+        "Software Engineer with 5+ years of experience in full-stack web and mobile development, specializing in JavaScript (ES6+), React.js, Next.js, Node.js, and React Native. Adept at debugging, solving complex challenges, and leveraging AI-powered tools to accelerate development.",
     contact: {
         email: "mehulsaxena45@gmail.com",
         phone: "7380526501",
@@ -144,8 +144,8 @@ const ThemeSwitcher: React.FC<{ theme: Theme; setTheme: (t: Theme) => void }> = 
         <button
             onClick={toggleTheme}
             className={`p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 ${theme === "light"
-                    ? "bg-slate-200 text-slate-800 focus:ring-indigo-500"
-                    : "bg-gray-700 text-slate-200 focus:ring-indigo-500"
+                ? "bg-slate-200 text-slate-800 focus:ring-indigo-500"
+                : "bg-gray-700 text-slate-200 focus:ring-indigo-500"
                 }`}
         >
             {theme === "light" ? (
@@ -160,8 +160,8 @@ const ThemeSwitcher: React.FC<{ theme: Theme; setTheme: (t: Theme) => void }> = 
                 </svg>
             ) : (
                 // Sun Icon (for light mode)
-               <img src={'./sun-3337.svg'} height={20} width={20}   className="filter brightness-0"
-/>
+                <img src={'./sun-3337.svg'} height={20} width={20} className="filter brightness-0"
+                />
             )}
         </button>
 
@@ -185,6 +185,16 @@ const Header: React.FC<{ theme: Theme; setTheme: (t: Theme) => void }> = ({ them
                     {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
             ))}
+            <a
+                href="/Mehul_Saxena_CV.pdf"
+                download="Mehul-Saxena-CV.pdf"
+                onClick={() => setIsMenuOpen(false)}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition bg-indigo-800 text-white ${theme === "light" ? "hover:bg-slate-200 hover:text-black" : "hover:bg-gray-700"
+                    }`}
+            >
+                Download CV
+            </a>
+
         </div>
     );
 
